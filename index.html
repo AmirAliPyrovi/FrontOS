@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmirOs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body background="AmirOS_ Neon Mountain Moonlight.png" style="z-index: +99999999999;">
+<div id="taskbar">
+</div>
+<img src="Glossy Futuristic AmirOS Logo.png" alt="logo" id="logom">
+<div class="search-container">
+    <img src="loading-animation-8.gif" style="width: 20px;position: fixed;" class="search-icon" id="g">
+    <span class="search-icon" id="c">⌕</span>
+    <input type="text" placeholder="Searching " id="search">
+</div>
+<div id="iconapptaskbar2">
+    <i class="fa-solid fa-wifi" id="wifi"></i>
+    <i class="fa-solid fa-volume-high" id="i1"></i>
+    <div id="battery"></div>
+    
+</div>
+<div id="iconapptaskbar3">
+    <div id="clock" style="font-size: 12px;"></div>
+    <div id="date" style="font-size: 12px;"></div>
+    
+</div>
+</div>
+<div id="volume-box">
+    <i class="fa-solid fa-volume-high"  style="font-size: 25px;" id="i5"></i>
+    <i style="font-size: 30px;" id="i3" >🔇</i>
+    <input type="range" id="volume" min="0" max="100" value="50">
+    <span id="volume-value">50%</span>
+</div>
+<div id="start-menu">
+     <div class="sidebar">
+        <div class="profile">
+            <div class="avatar">👤</div>
+            <div>
+                <h3>AmirAli Pyrovi</h3>
+                <p>User</p>
+            </div>
+        </div>
+        <div class="menu-items">
+            <div class="menu-item">
+                <span class="emoji2">⏻</span>
+                خاموش کردن
+                <span class="arrow">›</span>
+            </div>
+        </div>
+    </div>
+    <div class="apps">
+        <div class="app">
+            <span class="app-icon" id="app-icon-browse">🌐</span>
+            <span>مرورگر</span>
+        </div>
+        <div class="app">
+            <span class="app-icon">📝</span>
+            <span>Notepad++</span>
+        </div>
+        <div class="app">
+            <span class="app-icon">▶️</span>
+            <span>مدیر رسانه</span>
+        </div>
+        <div class="app">
+            <span class="app-icon">🕒</span>
+            <span>ساعت</span>
+        </div>
+    </div>
+</div>
+     <div class="app2">
+            <span class="app-icon" id="app-icon-browser">🌐</span>
+            <span><pre>  مرورگر</pre></span>
+        </div>
+        <div class="app2">
+            <span class="app-icon" id="app-icon-notepad">📝</span>
+            <span>Notepad</span>
+        </div>
+        <div class="app2">
+            <span class="app-icon" id="app-icon-music">▶️</span>
+            <span>مدیر رسانه</span>
+        </div>
+        <div class="app2">
+            <span class="app-icon" id="app-icon2" >🕒</span>
+            <span><pre>   ساعت </pre></span>
+        </div>
+
+        <div id="clock-app">
+    <div id="clock-header">
+        <button id="close-clock">×</button>
+    </div>
+    <div id="clock-content">
+        <p class="clock-title" >ساعت</p>
+        <div id="clock-time" class="clock2"></div>
+        <p class="clock-title">تاریخ</p>
+        <div id="clock-date" class="date2"></div>
+    </div>
+</div>
+
+<div id="music-app">
+
+    <div id="music-header">
+        <span>🎵 موزیک پلیر</span>
+        <button id="close-music">×</button>
+    </div>
+
+    <div class="music-content">
+
+        <div class="music-cover">
+            🎧
+        </div>
+
+        <h3 id="music-name">آهنگ انتخاب نشده</h3>
+        <p id="music-artist">Unknown Artist</p>
+
+        <input type="file" id="music-file" accept="audio/*" multiple>
+
+        <div class="progress-box">
+            <input type="range" id="music-progress" value="0" min="0" max="100">
+            <div class="music-time">
+                <span id="current-time">00:00</span>
+                <span id="duration">00:00</span>
+            </div>
+        </div>
+
+        <div class="music-controls">
+            <button id="prev-music">⏮</button>
+            <button id="play-music">▶</button>
+            <button id="next-music">⏭</button>
+        </div>
+
+        <div class="volume-control">
+            <span></span>
+            <input type="hidden" id="music-volume" min="0" max="100" value="70">
+        </div>
+
+    </div>
+
+</div>
+
+<div id="notepad-app">
+
+    <div id="notepad-header">
+        <span>📝 Notepad</span>
+        <button id="close-notepad">×</button>
+    </div>
+
+    <div id="notepad-toolbar">
+        <button id="new-note">📄 جدید</button>
+        <button id="save-note">💾 ذخیره</button>
+        <button id="open-note">📂 باز کردن</button>
+        <input type="file" id="note-file" accept=".txt" hidden>
+    </div>
+
+    <textarea id="note-text" placeholder="اینجا شروع به نوشتن کنید..."></textarea>
+
+    <div id="notepad-footer">
+        <span id="word-count">0 کلمه</span>
+        <span id="char-count">0 کاراکتر</span>
+    </div>
+
+</div>
+
+<div id="browser-app">
+
+    <div id="browser-header">
+        <span>🌐 Web Browser</span>
+        <button id="close-browser">×</button>
+    </div>
+
+    <div id="browser-toolbar">
+
+        <button id="browser-back">❮</button>
+        <button id="browser-forward">❯</button>
+        <button id="browser-refresh">⟳</button>
+        <button id="browser-home">⌂</button>
+
+        <input type="text" id="browser-url"
+        placeholder="Search or enter website address...">
+
+        <button id="browser-go">➜</button>
+
+    </div>
+
+    <div id="browser-content">
+
+        <iframe id="browser-frame"
+        src="about:blank"
+        title="Web Browser"></iframe>
+
+        <div id="browser-homepage">
+            <div class="browser-logo">🌐</div>
+            <h2>Welcome to WebOS Browser</h2>
+            <p>Search or enter a website address</p>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
+<script src="app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
