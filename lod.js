@@ -10,7 +10,7 @@ let timer = setInterval(function () {
     if (number >= 100) {
         clearInterval(timer);
 
-        window.location.href = "index.html";
+        window.location.href = "index2.html";
     }
 
 }, 50);
